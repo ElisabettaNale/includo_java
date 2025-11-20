@@ -18,7 +18,7 @@
 
 Questo progetto è un'applicazione sviluppata in Java che simula una piattaforma per preservare e trasmettere
 le competenze dei mestieri tradizionali rendendole accessibili anche a migranti e a persone coinvolte in 
-persorsi di riabilitazione sociale.<br>
+percorsi di riabilitazione sociale.<br>
 
 L'interfaccia che l'utente ha a disposizione è solamente quella da riga di 
 comando.
@@ -44,7 +44,7 @@ L’applicazione è organizzata seguendo il seguente schema:
 
 ```text
 📂 org/javabasics/
-├── 📁 controller/ (Inizializzazione della piattaforma)
+├── 📁 controller/ (Avvio, settaggio e terminazione della piattaforma)
 │   ├── Controller.java
 │   
 ├── 📁 models/ (Classi corrispondenti ai file utenti, corsi e prenotazioni)
@@ -52,18 +52,18 @@ L’applicazione è organizzata seguendo il seguente schema:
 │   ├── Prenotazione.java 
 │   ├── Utente.java
 │
-├── 📁 resources/ (File di inizio)
+├── 📁 resources/ (File importati all'avvio)
 │   ├── corsi.csv
 │   ├── prenotazioni.csv
 │   ├── utenti.csv
 │   
 ├── 📁 services/ (Logica dell'applicativo)
 │   ├── App.java (Messaggi di benvenuto e avvio input stream)
-│   ├── CSVReader.java (Lettura file csv secondo un modello fornito)
-│   ├── Comandi.java (Lettura comandi da tastiera e gestione errori)
+│   ├── CSVReader.java (Classe comune per la lettura dei file csv)
+│   ├── Comandi.java (Lettura comandi da tastiera)
 │   ├── CorsoService.java (Operazioni sulla variabile corsi)
 │   ├── PrenotazioniService.java (Operazioni sulla variabile prenotazioni)
-│   ├── UtenteService.java (Operazioni sulla variabile utente)
+│   ├── UtenteService.java (Operazioni sulla variabile utenti)
 │   ├── OperazioniHandler.java (Gestione corrispondenza fra input utente e operazione da eseguire)
 │
 └── 📜 Main.java
